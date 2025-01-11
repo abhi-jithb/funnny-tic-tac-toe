@@ -132,7 +132,7 @@ const App = () => {
       <p className="mt-6 text-gray-800 text-lg">
         Made with ❤️ by{" "}
         <a
-          href="https://www.buymeacoffee.com/abhijith"
+          href="https://www.buymeacoffee.com/abhijithb"
           className="text-blue-600 underline hover:text-blue-800"
           target="_blank"
           rel="noopener noreferrer"
