@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
+
+// Sound imports (make sure the sound files are available in your project folder)
+import winSound from "./assets/win.mp3";
+import drawSound from "./assets/draw.mp3";
+import cardPopSound from "./assets/card.mp3";
 
 const App = () => {
   const [board, setBoard] = useState(Array(9).fill(null));
@@ -10,6 +15,11 @@ const App = () => {
   const [showWinnerCard, setShowWinnerCard] = useState(false);
   const winner = calculateWinner(board);
   const { width, height } = useWindowSize();
+
+  // Reference to the sound elements
+  const winAudio = new Audio(winSound);
+  const drawAudio = new Audio(drawSound);
+  const cardPopAudio = new Audio(cardPopSound);
 
   const particlesInit = async (engine) => {
     await loadFull(engine);
@@ -21,6 +31,7 @@ const App = () => {
     newBoard[index] = isXNext ? "X" : "O";
     setBoard(newBoard);
     setIsXNext(!isXNext);
+    cardPopAudio.play(); // Play card popping sound when a cell is clicked
   };
 
   const resetGame = () => {
@@ -31,13 +42,16 @@ const App = () => {
 
   const celebrateWin = () => {
     if (winner) {
+      winAudio.play(); // Play win sound when a winner is detected
       setShowWinnerCard(true);
+    } else if (!winner && !board.includes(null)) {
+      drawAudio.play(); // Play draw sound when there is a draw
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     celebrateWin();
-  }, [winner]);
+  }, [winner, celebrateWin]); // Add celebrateWin to the dependency array
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-pink-400 via-yellow-300 to-green-300 relative">
