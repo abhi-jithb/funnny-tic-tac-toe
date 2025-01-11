@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Interactive Tic Tac Toe Game 🎮
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, interactive Tic Tac Toe game built with React, featuring beautiful animations, particle effects, and engaging sound design.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+### Core Gameplay
+- Interactive 3x3 game grid with smooth animations
+- Alternating turns between X (red) and O (blue) players
+- Smart win detection for rows, columns, and diagonals
+- Draw detection when no winning moves remain
+- Instant game reset functionality
 
-### `npm start`
+### Visual Effects
+- Dynamic particle background using react-tsparticles
+- Celebratory confetti animation on victory
+- Responsive cell animations on player moves
+- Color-coded player marks (X: red, O: blue)
+- Mobile-optimized responsive design
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Audio Experience
+- Victory celebration sound
+- Draw game sound effect
+- Satisfying card pop sound on cell clicks
+- All sounds can be toggled on/off
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+- **React** - Frontend framework
+- **react-tsparticles** - Background particle effects
+- **react-confetti** - Victory celebration effects
+- **react-use** - Utility hooks for responsive design
+- **Web Audio API** - Sound effect management
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Getting Started
 
-### `npm run build`
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/tictactoe-game.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
+```bash
+cd tic-tac-toe
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Start the development server:
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Open http://localhost:3000 in your browser
 
-### `npm run eject`
+## 📱 Responsive Design
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The game is fully responsive and works seamlessly across:
+- Desktop computers (1024px and above)
+- Tablets (768px to 1023px)
+- Mobile devices (320px to 767px)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🎯 Game Logic
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Win Detection
+The game continuously checks for winning combinations:
+- 3 horizontal rows
+- 3 vertical columns
+- 2 diagonal possibilities
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Draw Detection
+- Automatically detects when all cells are filled
+- Triggers draw animation and sound
+- Prompts players to start a new game
 
-## Learn More
+## 🎨 Custom Styling
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The game features a modern, gradient-based design:
+- Dynamic background particles
+- Smooth hover effects
+- Engaging click animations
+- Celebratory effects
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/AmazingFeature`
+3. Commit your changes: `git commit -m 'Add some AmazingFeature'`
+4. Push to the branch: `git push origin feature/AmazingFeature`
+5. Open a pull request
 
-### Analyzing the Bundle Size
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-### Making a Progressive Web App
+## 💝 Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+If you enjoy this game, consider supporting the developer:
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support-yellow.svg)](https://www.buymeacoffee.com/abhijithb)
